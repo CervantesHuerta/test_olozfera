@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+    height: 2500px;
+}
+body {
+    min-height: 100%;
+}
+ #uno {
+    position: absolute;
+    top: 0px;
+    left: 0%;   
+}
+#dos {  
+
+    position: absolute;
+    top: 1250px;
+    left: 0%;      
+}
+#tres {
+    position: absolute;
+    top: 2500px;
+    left: 0%; 
+}
+    </style>
+</head>
+<body>
+    <div>
+        <button id="uno">UNO</button>
+        <button id="dos">DOS</button>
+        <button id="tres">TRES</button>
+    </div>
+</body>
+<script>
+    const scrollBtn = document.querySelector('#uno');
+    const scrollBtn2 = document.querySelector('#dos');
+    const scrollBtn3 = document.querySelector('#tres');
+
+ scrollBtn.addEventListener('click', () =>{
+     window.scroll({
+         top: 2500,
+         behavior: 'smooth',
+     });
+ });
+
+ scrollBtn2.addEventListener('click', () =>{
+     let width = window.innerWidth;
+
+     if (width>1024) {
+        window.scroll({
+         top: 2500,
+         behavior: 'smooth',
+     });         
+     }else{
+        window.scroll({
+         top: 0,
+         behavior: 'smooth',
+     });
+     }
+     
+ });
+ 
+ scrollBtn3.addEventListener('click', () =>{
+     window.scroll({
+         top: 0,
+         behavior: 'smooth',
+     });
+ });
+</script>
+</html>
